@@ -4,7 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+
 public class MainActivity extends AppCompatActivity {
+
+
+    private MeowBottomNavigation bottomNavigation;
+
+
+    //=====================All Veriable here & OnCreate Buindle Start here=====================
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,5 +22,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    /////=============================================
+    /////=======================On Create Buindle End here======================
 }
