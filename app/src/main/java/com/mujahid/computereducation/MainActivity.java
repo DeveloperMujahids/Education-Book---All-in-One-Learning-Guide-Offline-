@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
@@ -23,6 +24,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.bdtopcoder.smart_slider.SliderAdapter;
+import com.bdtopcoder.smart_slider.SliderItem;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
@@ -31,6 +34,9 @@ import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
 import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
@@ -277,6 +283,28 @@ public class MainActivity extends AppCompatActivity {
         ////-----------------------------------------Bottom Navigation Code End Here-----------------------------------
 
         ///=============== Navigation Start here========================================
+
+        ////==========================Home Slider Code start ===========================
+        ViewPager2 viewPager2 = findViewById(R.id.smartSlider);
+
+        ///String img = "https://i.dummyjson.com/data/products/1/1.jpg";
+        List<SliderItem> sliderItems = new ArrayList<>();
+        //  sliderItems.add(new SliderItem(R.drawable.logo,"image 1"));
+
+
+        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,3000));
+        new SliderAdapter((position, title, view) -> {
+            // Toast.makeText(this, "Position: "+position+" Title: "+title, Toast.LENGTH_SHORT).show();
+        });
+
+        ////==========================Home Slider Code Ends ===========================
 
 ///############################################################################################################################################################
 
