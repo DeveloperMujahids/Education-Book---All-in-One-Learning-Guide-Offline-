@@ -16,14 +16,22 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bdtopcoder.smart_slider.SliderAdapter;
 import com.bdtopcoder.smart_slider.SliderItem;
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
@@ -49,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     ImageView imageMenu;
+
+    TextView live_notice;
     ListView list_item;
     private MeowBottomNavigation bottomNavigation;
     LinearLayout notifications, description, homepase;
@@ -292,11 +302,11 @@ public class MainActivity extends AppCompatActivity {
         //  sliderItems.add(new SliderItem(R.drawable.logo,"image 1"));
 
 
-        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
-        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
-        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
-        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
-        sliderItems.add(new SliderItem(R.drawable.logo,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.h2,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.h2,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.h2,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.h2,"Image from url"));
+        sliderItems.add(new SliderItem(R.drawable.h2,"Image from url"));
 
 
         viewPager2.setAdapter(new SliderAdapter(sliderItems,viewPager2,3000));
@@ -305,6 +315,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ////==========================Home Slider Code Ends ===========================
+
+        //========================Earning Notice Start================================================
+
+        live_notice = findViewById(R.id.live_notice);
+        live_notice.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+        live_notice.setSelected(true);
+
+
+        String URLS3 = "https://mujahid33888.000webhostapp.com/FreelearningBD/PHP/Earn_Notice.php";
+        StringRequest stringRequests3 = new StringRequest(Request.Method.GET, URLS3, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                ///Responce Code here-----------------
+                live_notice.setText(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //Erorr Code here--------------
+                live_notice.setText("      আপডেট নোটিশ গুলো পেতে আপনার ইন্টারনেট কানেকশন থাকতে হবে!");
+            }
+        }
+
+        );
+
+        RequestQueue requestQueues3 = Volley.newRequestQueue(MainActivity.this);
+        requestQueues3.add(stringRequests3);
+        //========================Earning Notice End================================================
 
 ///############################################################################################################################################################
 

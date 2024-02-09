@@ -85,6 +85,7 @@
             android:layout_above="@+id/bottomNavigation"
             >
 
+
             <LinearLayout
                 android:id="@+id/homepase"
                 android:layout_width="match_parent"
@@ -93,7 +94,6 @@
                 android:visibility="visible"
                 android:orientation="vertical"
                 >
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -134,6 +134,7 @@
                     android:layout_height="120dp"
                     android:gravity="center"
                     android:orientation="vertical"
+
                     >
                     <androidx.viewpager2.widget.ViewPager2
                         android:id="@+id/smartSlider"
@@ -147,6 +148,102 @@
                         />
 
                 </LinearLayout>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  >
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="150dp"
+                      android:layout_gravity="center"
+                      android:layout_alignParentBottom="true"
+                      android:background="@drawable/custom_design"
+                      android:gravity="center"
+                      android:orientation="horizontal"
+                      >
+
+                      <androidx.cardview.widget.CardView
+                          style="@style/ShapeAppearance.Neumorph.CardView"
+                          android:layout_width="match_parent"
+                          android:layout_height="90dp"
+                          android:src="@drawable/h2"
+                          android:scaleType="centerCrop"
+                          android:layout_marginLeft="20dp"
+                          android:layout_marginRight="20dp"
+                          app:cardCornerRadius="20dp"
+                          >
+                          <LinearLayout
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:orientation="horizontal"
+                              android:weightSum="4"
+                              android:foreground="?attr/selectableItemBackground"
+                              android:clickable="true"
+                              >
+                              <ImageView
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:src="@drawable/logo"
+                                  android:scaleType="centerCrop"
+                                  android:layout_weight="3"
+                                  />
+                              <LinearLayout
+                                  android:layout_width="match_parent"
+                                  android:layout_height="match_parent"
+                                  android:layout_weight="1"
+                                  android:orientation="vertical"
+                                  android:gravity="center"
+                                  >
+                                  <TextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:textSize="25sp"
+                                      android:textStyle="bold"
+                                      android:textColor="#000000"
+                                      android:padding="5dp"
+                                      android:text="কম্পিউটার শিখুন"
+                                      android:gravity="center"
+                                      android:layout_gravity="center"
+                                      android:fontFamily="@font/font1"
+                                      />
+                                  <View
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1dp"
+                                      android:background="#000000"
+                                      />
+                                  <View
+                                      android:layout_width="match_parent"
+                                      android:layout_height="1dp"
+                                      android:background="#000000"
+                                      android:paddingTop="2dp"
+                                      />
+                                  <TextView
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:textSize="17sp"
+                                      android:textStyle="bold"
+                                      android:textColor="#000000"
+                                      android:padding="5dp"
+                                      android:text="কম্পিউটার শিখুন"
+                                      android:gravity="center"
+                                      android:layout_gravity="center"
+                                      android:fontFamily="@font/font1"
+                                      />
+
+
+                              </LinearLayout>
+
+                          </LinearLayout>
+
+                      </androidx.cardview.widget.CardView>
+
+
+
+                  </LinearLayout>
+              </RelativeLayout>
+
+
 
 
 
