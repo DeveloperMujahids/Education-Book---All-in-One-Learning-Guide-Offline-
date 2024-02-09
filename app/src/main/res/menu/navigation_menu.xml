@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/developer"
+        android:icon="@drawable/baseline_call_24"
+        android:title="Developer Contact"
+        />
+
+    <item
+        android:id="@+id/privacy_policy"
+        android:icon="@drawable/baseline_privacy_24"
+        android:title="Privacy Policy"
+        />
+
+    <item
+        android:id="@+id/more_app"
+        android:icon="@drawable/baseline_more_apps_24"
+        android:title="More Apps"
+        />
+
+    <item
+        android:id="@+id/rate_app"
+        android:icon="@drawable/baseline_star_rate_24"
+        android:title="Rate App"
+        />
+
+    <item
+        android:id="@+id/share_app"
+        android:icon="@drawable/baseline_share_24"
+        android:title="Share App"
+        />
+
+    <item
+        android:id="@+id/facebook_page"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Facrebook Page"
+        />
+
+</menu>
