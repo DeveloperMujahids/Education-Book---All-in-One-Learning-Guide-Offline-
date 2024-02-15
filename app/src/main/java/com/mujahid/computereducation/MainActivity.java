@@ -45,6 +45,7 @@ import com.google.android.play.core.install.model.AppUpdateType;
 import com.google.android.play.core.install.model.UpdateAvailability;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import kotlin.Unit;
@@ -58,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
     ImageView imageMenu;
+
+    ArrayList<HashMap<String, String>> arrayList = new ArrayList();
+    HashMap<String, String> hashMap;
 
     LottieAnimationView facebook_page_lottie;
 
