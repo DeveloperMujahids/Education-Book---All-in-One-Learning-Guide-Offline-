@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<HashMap<String, String>> arrayList = new ArrayList();
     HashMap<String, String> hashMap;
-
     LottieAnimationView facebook_page_lottie;
 
     TextView live_notice;
